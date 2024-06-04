@@ -53,28 +53,31 @@
 
         <h2>Crie sua conta</h2>
         <h5>e concorra a promoções incríveis!</h5>
+        
+        <form action="" method="post">
+            
+            <input type="text" name="nome" placeholder="Nome completo" id="nome"/>
 
-        <input type="text" placeholder="Nome completo" id="nome"/>
+            <input type="text" name="cpf" maxlength="11" placeholder="CPF" id="cpf"/>
 
-        <input type="text" maxlength="11" placeholder="CPF" id="cpf"/>
+            <input type="text" name="email" placeholder="E-mail" id="email"/>
 
-        <input type="email" placeholder="E-mail" id="email"/>
+            <input type="text" name="senha" placeholder="Senha" id="senha"/>
 
-        <input type="password" placeholder="Senha" id="senha"/>
+            <input type="text" name="confirmarsenha" placeholder="Confirmar senha" id="confirmasenha"/>
 
-        <input type="password" placeholder="Confirmar senha" id="confirmasenha"/>
+            <div id="check-box">
+                <section id="corpocheck">
+                    <input type="checkbox" id="termosuso"/>
+                    <label for="termosuso" class="checkpersonalizado"></label>
+                </section>
+                <aside id="textolateral">
+                    <p>Eu li e concordo com os <a href="termosdeuso.html">Termos de Uso</a> e <a href="politicadeprivacidade.html">Política de Privacidade</a>. A GamerShop não coleta intencionalmente dados de crianças menores de 13 anos de idade.</p>
+                </aside>
+            </div>
 
-        <div id="check-box">
-            <section id="corpocheck">
-                <input type="checkbox" id="termosuso"/>
-                <label for="termosuso" class="checkpersonalizado"></label>
-            </section>
-            <aside id="textolateral">
-                <p>Eu li e concordo com os <a href="termosdeuso.html">Termos de Uso</a> e <a href="politicadeprivacidade.html">Política de Privacidade</a>. A GamerShop não coleta intencionalmente dados de crianças menores de 13 anos de idade.</p>
-            </aside>
-        </div>
-
-        <p><button id="criarbutton">CRIAR CONTA</button></p>
+            <p><button type="submit" name="criarconta" id="criarbutton">CRIAR CONTA</button></p>
+        </form>
 
         <p id="comconta">Já tem conta?</p>
 
