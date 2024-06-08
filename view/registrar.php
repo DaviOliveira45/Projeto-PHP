@@ -9,6 +9,22 @@
     <link rel="stylesheet" href="css/styleregistro.css"/>
 
 </head>
+
+<script>
+    function mascaraCPF() 
+    {
+        var cpf = document.getElementById('cpf');
+        if(cpf.value.length == 3 || cpf.value.length == 7)
+        {
+          cpf.value += ".";
+        }
+        else if(cpf.value.length == 11)
+        {
+          cpf.value += "-";
+        }
+    }
+</script>
+
 <body>
     <div id="interface">
 
@@ -52,11 +68,11 @@
             require_once("../model/verificacao.php");
         ?>
         
-        <form action="" method="POST">
+        <form action="../controller/cadastraCliente.php" method="POST" type="submit">
             
             <input type="text" name="nome" value="<?php echo $nome; ?>" placeholder="Nome completo" id="nome"/>
 
-            <input type="text" name="cpf" value="<?php echo $cpf; ?>" maxlength="11" placeholder="CPF" id="cpf"/>
+            <input type="text" name="cpf" value="<?php echo $cpf; ?>" maxlength="14" placeholder="CPF" id="cpf"  onkeyup="mascaraCPF()"/>
 
             <input type="text" name="email" value="<?php echo $email; ?>" placeholder="E-mail" id="email"/>
 
