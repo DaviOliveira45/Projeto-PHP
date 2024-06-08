@@ -68,7 +68,7 @@
             require_once("../model/verificacao.php");
         ?>
         
-        <form action="../controller/cadastraCliente.php" method="POST" type="submit">
+        <form action="" method="POST" type="submit">
             
             <input type="text" name="nome" value="<?php echo $nome; ?>" placeholder="Nome completo" id="nome"/>
 

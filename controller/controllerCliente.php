@@ -21,6 +21,14 @@
 
                 $novoCliente->cadastraCliente();
             }
+
+            elseif($acao == "R") {
+                $Cliente = new Cliente();
+                $Cliente->listarCliente();
+
+            }
+
+            
         }
     }
 

@@ -6,8 +6,6 @@
     $email = isset($_POST['email']) ? $_POST['email'] : "";
     $senha = isset($_POST['senha']) ? $_POST['senha'] : "";
     $confirmarSenha = isset($_POST['confirmarsenha']) ? $_POST['confirmarsenha'] : "";
-
-    //Atualizações de confirmação de inputs
     
 
     if (isset($_POST['criarconta'])) {
@@ -33,5 +31,19 @@
         } else {
             echo "<p style='color: red'>Todos os campos devem estar preenchidos</p>";
         }
+
+        if (!empty($_POST['nome']) and !empty($_POST['cpf']) and !empty($_POST['email']) and !empty($_POST['senha']) and !empty($_POST['confirmarsenha']) and $_POST['confirmarsenha'] ==  $_POST['senha'] and filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+            
+            require_once("../controller/controllerCliente.php");
+            $controle = new controllerCliente();
+            $controle->action("C");
+
+            $nome = "";
+            $cpf = "";
+            $email = "";
+            $senha = "";
+            $confirmarSenha = "";
+        }
+
     }
 ?>

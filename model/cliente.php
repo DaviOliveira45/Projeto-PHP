@@ -28,12 +28,27 @@
                 $senha=$this->senha;
 
                 $sql->execute();
+
+                echo "<p style='color: green'> Cadastro realizado com sucesso! </p>";
                 
 
             }catch(PDOException $erro)
             {
-                echo "Cadastro falhou! " . $erro->getMessage();
+                echo "<p style='color: red'>Cadastro falhou! </p>";
             }
+        }
+
+
+        public function listarCliente(){
+                $conn = Conexao::conectar();
+
+                $sql = $conn->prepare("SELECT id, nomeCliente, cpf, email, senha FROM gamershop.clientes");
+                
+                $sql->execute();
+                $result = $sql->fetchAll();
+
+                // print_r($result);
+                require_once('../view/listar.php');
         }
 
 
