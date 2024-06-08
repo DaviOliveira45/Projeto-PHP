@@ -6,6 +6,8 @@
     $email = isset($_POST['email']) ? $_POST['email'] : "";
     $senha = isset($_POST['senha']) ? $_POST['senha'] : "";
     $confirmarSenha = isset($_POST['confirmarsenha']) ? $_POST['confirmarsenha'] : "";
+
+    //Atualizações de confirmação de inputs
     
 
     if (isset($_POST['criarconta'])) {
