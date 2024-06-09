@@ -22,7 +22,7 @@
         $controle->action("R");
     }
 
-    elseif($url=="EXCLUIRCLIENTE")
+    elseif($url=="EXCLUIR")
     {
         require_once("controller/controllerCliente.php");
         $controle = new controllerCliente();
