@@ -1,6 +1,6 @@
 <?php 
 
-    require_once('../model/cliente.php');
+    require_once('model/cliente.php');
 
     class controllerCliente{
 
@@ -20,15 +20,23 @@
                 $novoCliente->setSenha($_POST['senha']);
 
                 $novoCliente->cadastraCliente();
-            }
-
-            elseif($acao == "R") {
+                
+            } 
+            else if($acao == "R") 
+            {
                 $Cliente = new Cliente();
                 $Cliente->listarCliente();
+            }  
+        }
+
+        public function actionDelete($acao, $id)
+        {
+            if($acao == "E") //EXCLUIR (DELETE)
+            {
+                $Cliente = new Cliente();
+                $Cliente->ExcluirCliente($id);
 
             }
-
-            
         }
     }
 

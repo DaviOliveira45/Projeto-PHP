@@ -65,7 +65,7 @@
         <h5>e concorra a promoções incríveis!</h5>
 
         <?php 
-            require_once("../model/verificacao.php");
+            require_once("./model/verificacao.php");
         ?>
         
         <form action="" method="POST" type="submit">

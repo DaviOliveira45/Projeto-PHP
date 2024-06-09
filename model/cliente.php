@@ -1,6 +1,6 @@
 <?php 
 
-    include_once('conexao.php');
+    require_once('model/conexao.php');
 
     class Cliente{
 
@@ -10,45 +10,58 @@
         private $email;
         private $senha;
 
-
-        public function cadastraCliente(){
-
-            try{
+        public function cadastraCliente() {
+                try {
                 $conn = Conexao::conectar();
-
                 $sql = $conn->prepare("INSERT INTO gamershop.clientes (nomeCliente, cpf, email, senha) VALUES (:nomeUsuario, :cpf, :email, :senha)");
-                $sql->bindParam("nomeUsuario", $nomeCliente);
-                $sql->bindParam("cpf", $cpf);
-                $sql->bindParam("email", $email);
-                $sql->bindParam("senha", $senha);
+                $sql->bindParam(":nomeUsuario", $nomeCliente);
+                $sql->bindParam(":cpf", $cpf);
+                $sql->bindParam(":email", $email);
+                $sql->bindParam(":senha", $senha);
                 
-                $nomeCliente=$this->nomeCliente;
-                $cpf=$this->cpf;
-                $email=$this->email;
-                $senha=$this->senha;
+                $nomeCliente = $this->nomeCliente;
+                $cpf = $this->cpf;
+                $email = $this->email;
+                $senha = $this->senha;
 
                 $sql->execute();
-
                 echo "<p style='color: green'> Cadastro realizado com sucesso! </p>";
-                
-
-            }catch(PDOException $erro)
-            {
+                } catch (PDOException $erro) {
                 echo "<p style='color: red'>Cadastro falhou! </p>";
-            }
+                }
         }
 
-
-        public function listarCliente(){
+        public function listarCliente() {
                 $conn = Conexao::conectar();
 
-                $sql = $conn->prepare("SELECT id, nomeCliente, cpf, email, senha FROM gamershop.clientes");
+                $sql = $conn->prepare("SELECT idCliente, nomeCliente, cpf, email, senha FROM gamershop.clientes");
                 
                 $sql->execute();
                 $result = $sql->fetchAll();
 
                 // print_r($result);
-                require_once('../view/listar.php');
+                require_once('./view/listar.php');
+        }
+            
+
+        public function excluirCliente($id) {
+                $conn = Conexao::conectar();
+                if (!$conn) {
+                echo "<p style='color: red'>Falha na conexão com o banco de dados.</p>";
+                return;
+                }
+
+                $sql = $conn->prepare("SELECT idCliente, nomeCliente, cpf, email, senha FROM gamershop.clientes");
+                $sql->execute();
+                $result = $sql->fetchAll();
+
+                if (!empty($id)) {
+                $sqlDelete = $conn->prepare("DELETE FROM gamershop.clientes WHERE idCliente = :id");
+                $sqlDelete->bindParam(":id", $id);
+                $sqlDelete->execute();
+                }
+
+                require_once('./view/excluir.php');
         }
 
 

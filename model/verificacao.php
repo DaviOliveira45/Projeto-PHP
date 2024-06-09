@@ -34,7 +34,7 @@
 
         if (!empty($_POST['nome']) and !empty($_POST['cpf']) and !empty($_POST['email']) and !empty($_POST['senha']) and !empty($_POST['confirmarsenha']) and $_POST['confirmarsenha'] ==  $_POST['senha'] and filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
             
-            require_once("../controller/controllerCliente.php");
+            require_once("./controller/controllerCliente.php");
             $controle = new controllerCliente();
             $controle->action("C");
 
