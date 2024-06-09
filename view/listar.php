@@ -1,7 +1,3 @@
-<?php 
-    
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,23 +15,24 @@
                     <th>ID</th>
                     <th>Nome</th>
                     <th>CPF</th>
-                    <th>EMAIL</th>
-                    <th>SENHA</th>
+                    <th>Email</th>
+                    <th>Senha</th>
+                    <th>Ações</th>
                 </tr>
             </thead>
             <tbody>
-                <?php 
-                    foreach($result as $infoClientes)
-                    {
-                ?>
+                <?php foreach($result as $infoClientes){ ?>
                 <tr>
-                    <td><?=$infoClientes['idCliente']?></td>
-                    <td><?=$infoClientes['nomeCliente']?></td>
-                    <td><?=$infoClientes['cpf']?></td>
-                    <td><?=$infoClientes['email']?></td>
-                    <td><?=$infoClientes['senha']?></td>
+                    <td><?= $infoClientes['idCliente'] ?></td>
+                    <td><?= $infoClientes['nomeCliente'] ?></td>
+                    <td><?= $infoClientes['cpf'] ?></td>
+                    <td><?= $infoClientes['email'] ?></td>
+                    <td><?= $infoClientes['senha'] ?></td>
+                    <td>
+                        <a href="index.php?url=EDITAR&id=<?= $infoClientes['idCliente'] ?>">Editar</a>
+                    </td>
                 </tr>
-            <?php } ?>
+                <?php } ?>
             </tbody>
         </table>
     </div>    

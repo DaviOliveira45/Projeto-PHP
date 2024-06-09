@@ -42,7 +42,32 @@
                 // print_r($result);
                 require_once('./view/listar.php');
         }
-            
+        
+
+        public function getClienteById($id) {
+                $conn = Conexao::conectar();
+                $sql = $conn->prepare("SELECT * FROM gamershop.clientes WHERE idCliente = :id");
+                $sql->bindParam(':id', $id, PDO::PARAM_INT);
+                $sql->execute();
+                return $sql->fetch(PDO::FETCH_ASSOC);
+        }
+        
+        public function updateCliente($id, $nome, $cpf, $email, $senha) {
+                try {
+                    $conn = Conexao::conectar();
+                    $sql = $conn->prepare("UPDATE gamershop.clientes SET nomeCliente = :nome, cpf = :cpf, email = :email, senha = :senha WHERE idCliente = :id");
+                    $sql->bindParam(':id', $id, PDO::PARAM_INT);
+                    $sql->bindParam(':nome', $nome);
+                    $sql->bindParam(':cpf', $cpf);
+                    $sql->bindParam(':email', $email);
+                    $sql->bindParam(':senha', $senha);
+                    $sql->execute();
+                    echo "<p style='color: green'>Cliente atualizado com sucesso!</p>";
+                } catch (PDOException $erro) {
+                    echo "<p style='color: red'>Atualização falhou!</p>";
+                }
+        }
+           
 
         public function excluirCliente($id) {
                 $conn = Conexao::conectar();

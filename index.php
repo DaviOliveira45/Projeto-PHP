@@ -21,7 +21,6 @@
         $controle = new controllerCliente();
         $controle->action("R");
     }
-
     elseif($url=="EXCLUIR")
     {
         require_once("controller/controllerCliente.php");
@@ -32,5 +31,17 @@
         $idExcluir = $teste[1];
         $controle->actionDelete("E", $idExcluir);
     }
-
+    elseif ($url == "EDITAR") 
+    {
+        require_once("controller/controllerCliente.php");
+        $controle = new controllerCliente();
+        $id = $_GET['id'];
+        $controle->actionEdit("U", $id);
+    } 
+    elseif ($url == "ATUALIZARCLIENTE") 
+    {
+        require_once("controller/controllerCliente.php");
+        $controle = new controllerCliente();
+        $controle->actionUpdate("U");
+    }
 ?>

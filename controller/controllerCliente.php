@@ -38,6 +38,27 @@
 
             }
         }
+
+        public function actionEdit($acao, $id) {
+            if ($acao == "U") {
+                $Cliente = new Cliente();
+                $cliente = $Cliente->getClienteById($id);
+                require_once('view/editar.php');
+            }
+        }
+    
+        public function actionUpdate($acao) {
+            if ($acao == "U") {
+                $Cliente = new Cliente();
+    
+                $id = $_POST['idCliente'];
+                $cpfAux = str_replace(".", "", $_POST['cpf']);
+                $_POST['cpf'] = str_replace("-", "", $cpfAux);
+    
+                $Cliente->updateCliente($id, $_POST['nomeCliente'], $_POST['cpf'], $_POST['email'], $_POST['senha']);
+                header('Location: index.php?url=LISTACLIENTE');
+            }
+        }
     }
 
 ?>
