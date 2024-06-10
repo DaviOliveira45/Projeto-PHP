@@ -5,56 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrar | GamerShop</title>
 
-    <link rel="stylesheet" href="css/style.css"/>
-    <link rel="stylesheet" href="css/styleregistro.css"/>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/styleregistro.css"/>
+    <script src="../java/interacao.js"></script>
 
 </head>
-
-<script>
-    function mascaraCPF() 
-    {
-        var cpf = document.getElementById('cpf');
-        if(cpf.value.length == 3 || cpf.value.length == 7)
-        {
-          cpf.value += ".";
-        }
-        else if(cpf.value.length == 11)
-        {
-          cpf.value += "-";
-        }
-    }
-</script>
-
 <body>
     <div id="interface">
 
     <header id="cabecalho">
 
     <nav id="menu">
+    
         <h1>Menu principal</h1>
         <ul type="square">
-            <li id="geral"><a href="index.html">Home</a></li>
-            <li id="geral"><a href="playstation.html">PlayStation</a></li>
-            <li id="geral"><a href="steam.html">Steam</a></li>           
+            <li id="geral"><a href="index.php">Home</a></li>
+            <li id="geral"><a href="playstation.php">PlayStation</a></li>
+            <li id="geral"><a href="steam.php">Steam</a></li>          
         </ul>
         <div id="campopesquisa">
             <section id="pesquisa">
+                <form action="registrar.php" method="get">
                 <input type="text" placeholder="Busque seu jogo..." id="search"/>
             </section>
             <aside id="pesquisa1">
-                <img id="pesquisadesktop" src="imagens/imgpesquisar_resized.png"/>
+                <img id="pesquisadesktop" src="../imagens/imgpesquisar_resized.png"/>
             </aside>    
         </div>
         <ul id="entrar-registro">
-            <li><a href="login.html">Entrar/Registrar</a></li>
+            <li> echo <a href="login.php">Entrar/Registrar</a></li>
         </ul>
 
     </nav>
 
-    <img id="logo" src="imagens/G mer (200 x 112 px).png"/>
+    <img id="logo" src="../imagens/G mer (200 x 112 px).png"/>
+    <img id="logomobile" src="../imagens/logo_gamershop (63 x 63 px).png"/>
+
+    <div id="submenubotao">
+        <img src="../imagens/imgbotao-att.png"/>
+    </div>
 
     <div id="sacoladesktop">
-        <img src="imagens/sacola(60 x 40).png"/>
+        <img src="../imagens/sacola(60 x 40).png"/>
     </div>
 
     </header>
@@ -64,39 +56,33 @@
         <h2>Crie sua conta</h2>
         <h5>e concorra a promoções incríveis!</h5>
 
-        <?php 
-            require_once("./model/verificacao.php");
-        ?>
-        
-        <form action="" method="POST" type="submit">
-            
-            <input type="text" name="nome" value="<?php echo $nome; ?>" placeholder="Nome completo" id="nome"/>
+        <input type="text" placeholder="Nome completo" id="nome"/>
 
-            <input type="text" name="cpf" value="<?php echo $cpf; ?>" maxlength="14" placeholder="CPF" id="cpf"  onkeyup="mascaraCPF()"/>
+        <input type="text" maxlength="11" placeholder="CPF" id="cpf"/>
 
-            <input type="text" name="email" value="<?php echo $email; ?>" placeholder="E-mail" id="email"/>
+        <input type="email" placeholder="E-mail" id="email"/>
 
-            <input type="text" name="senha" value="<?php echo $senha; ?>" placeholder="Senha" id="senha"/>
+        <input type="password" placeholder="Senha" id="senha"/>
 
-            <input type="text" name="confirmarsenha" value="<?php echo $confirmarSenha; ?>" placeholder="Confirmar senha" id="confirmasenha"/>
+        <input type="password" placeholder="Confirmar senha" id="confirmasenha"/>
 
-            <!-- <div id="check-box">
-                <section id="corpocheck">
-                    <input type="checkbox" id="termosuso"/>
-                    <label for="termosuso" class="checkpersonalizado"></label>
-                </section>
-                <aside id="textolateral">
-                    <p>Eu li e concordo com os <a href="termosdeuso.html">Termos de Uso</a> e <a href="politicadeprivacidade.html">Política de Privacidade</a>. A GamerShop não coleta intencionalmente dados de crianças menores de 13 anos de idade.</p>
-                </aside>
-            </div> -->
+        <div id="check-box">
+            <section id="corpocheck">
+                <input type="checkbox" id="termosuso"/>
+                <label for="termosuso" class="checkpersonalizado"></label>
+            </section>
+            <aside id="textolateral">
+                <p>Eu li e concordo com os <a href="termosdeuso.html">Termos de Uso</a> e <a href="politicadeprivacidade.html">Política de Privacidade</a>. A GamerShop não coleta intencionalmente dados de crianças menores de 13 anos de idade.</p>
+            </aside>
+        </div>
 
-            <p><button type="submit" name="criarconta" value="criarconta" id="criarbutton">CRIAR CONTA</button></p>
-        </form>
+        <p><button id="criarbutton">CRIAR CONTA</button></p>
 
         <p id="comconta">Já tem conta?</p>
 
-        <p id="login"><a  id="login" href="login.html">Entrar na conta</a></p>
-    
+        <p id="login"><a  id="login" href="login.php">Entrar na conta</a></p>
+        
+            </form>
         </section>
     
         </div>
@@ -104,5 +90,8 @@
         <footer id="rodape">
             <p>GamerShop &reg;</p>
         </footer>
+
+
+
 </body>
 </html>

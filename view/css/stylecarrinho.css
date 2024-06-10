@@ -1,0 +1,115 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--cor-primaria);
+}
+
+.carrinho {
+    width: 400px;
+    height: min-content;
+    background: var(--cor-fundo);
+    padding: 35px;
+}
+
+.carrinho .cabecalho-carrinho {
+    display: flex;
+}
+
+.carrinho .cabecalho-carrinho button {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+    line-height: 50%;
+    color: var(--cor-primaria);
+    background: #ddddde50;
+    border: 2px solid #ddddde50;
+    border-radius: 8px;
+    transition: .4s;
+}
+
+.carrinho .cabecalho-carrinho button:hover {
+    color: #fff;
+    background: var(--cor-primaria);
+    border-color: var(--cor-primaria);
+}
+
+.carrinho .cabecalho-carrinho h3 {
+    margin: auto;
+    text-align: center;
+    font: 400 1.25rem 'Poppins';
+    color: var(--cor-primaria);
+}
+
+.carrinho ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.carrinho-itens {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.carrinho-itens img {
+    width: 80px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.carrinho-itens div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.carrinho-itens p {
+    margin: 5px 0;
+    font: 400 1rem 'Poppins', sans-serif;
+    color: var(--cor-secundaria);
+}
+
+.carrinho-itens p:first-child {
+    font-weight: 600;
+    color: var(--cor-primaria);
+}
+
+.carrinho-itens button {
+    background-color: var(--cor-primaria);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carrinho-itens button:hover {
+    background-color: #093136; /* Use um valor hexadecimal mais escuro da cor primária */
+}
+
+.cart-icon {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+#cart-count {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 0 5px;
+    margin-left: 5px;
+    font-size: 1rem;
+}

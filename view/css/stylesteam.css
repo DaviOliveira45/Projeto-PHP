@@ -8,9 +8,6 @@ div#fundosteam {
     margin-top: -1.2%;
 }
 
-div#fundosteammobile {
-    display: none;
-}
 
 div#fundosteam img{
     width: 100%;
@@ -98,23 +95,10 @@ div.cards button.comprar:hover {
 
 @media screen and (max-width: 430px) and (max-height: 932px) {
     
-    div#fundosteammobile {
-        width: 98.4%;
-        display: block;
-        margin-left: 1.6%;
-        background-color: none;
-        margin-bottom: 0;
-        margin-top: -1.2%;
-    }
-
     div#fundosteam {
         display: none;
     }
 
-    div#fundosteammobile img{
-        width: 100%;
-        height: auto;
-    }
 
     /* Formatação jogos*/
 
