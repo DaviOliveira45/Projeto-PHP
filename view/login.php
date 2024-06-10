@@ -50,18 +50,19 @@
         <h2>Entre</h2>
         <h5>e aproveite descontos exclusivos!</h5>
 
-        <input type="text" placeholder="E-mail" id="email" required/>
-    
-        <input type="password" placeholder="Senha" id="senha" required/>
-
-        <!--colocar um link--> <p id="perdeusenha"><a id="perdeusenha" href="recuperarsenha.html">esqueceu a senha?</a></p>
-
-        <!--colocar um botão--> <p id="entrar"><button id="entrarbutton">ENTRAR</button></p>
-
+        <form action="process_login.php" method="POST">
+            <input type="text" placeholder="E-mail" id="email"/>
+            <input type="password" placeholder="Senha" id="senha"/>
+            <!--colocar um link--> <p id="perdeusenha"><a id="perdeusenha" href="recuperarsenha.html">esqueceu a senha?</a></p>
+            <!--colocar um botão--> <p id="entrar"><button id="entrarbutton">ENTRAR</button></p>
+        </form>
+        <?php
+            if (isset($_GET['error']) && $_GET['error'] == 'invalid_credentials') {
+                echo '<p style="color: red;">Credenciais inválidas. Por favor, tente novamente.</p>';
+            }
+        ?>
         <p id="semconta">Não tem conta?</p>
-
         <!--colocar link--> <p id="registrar"><a  id="registrar" href="registrar.html">Criar uma conta</a></p>
-
         <!--colocar um texto de termos, para enviar para outra página-->
 
     </section>
