@@ -95,21 +95,21 @@
                 <p class="titulojogo">Stardew Valley</p>
                 <p class="titulojogolongo"><br></p>
                 <p class="preco">R$79,90</p>
-                <button class="comprar" onclick="adicionarAoCarrinho('Stardew Valley', 'R$79,70', '../imagens/stretched-1366-768-782781.png')">Adicionar ao adicionar</button>
+                <button class="comprar" onclick="adicionarAoCarrinho('Stardew Valley', 'R$79,70', '../imagens/stretched-1366-768-782781.png')">Adicionar ao Carrinho</button>
             </div>
             <div class="cards">
                 <img src="../imagens/stretched-1366-768-168258.jpg"/>
                 <p class="titulojogo">The Elder Scrolls V</p>
                 <p class="titulojogolongo"><br></p>
                 <p class="preco">R$199,99</p>
-                <button class="comprar" onclick="adicionarAoCarrinho('The Elder Scrolls V', 'R$199,99', '../imagens/stretched-1366-768-168258.jpg')">Adicionar ao adicionar</button>
+                <button class="comprar" onclick="adicionarAoCarrinho('The Elder Scrolls V', 'R$199,99', '../imagens/stretched-1366-768-168258.jpg')">Adicionar ao Carrinho</button>
             </div>
             <div class="cards">
                 <img src="../imagens/stretched-1366-768-749806.png"/>
                 <p class="titulojogo">Red Dead</p>
                 <p class="titulojogolongo">Redemption 2</p>
                 <p class="preco">R$199,90</p>
-                <button class="comprar" onclick="adicionarAoCarrinho('Red Dead', 'R$199,90', '../imagens/stretched-1366-768-928956.jpg')">Adicionar ao adicionar</button>
+                <button class="comprar" onclick="adicionarAoCarrinho('Red Dead', 'R$199,90', '../imagens/stretched-1366-768-928956.jpg')">Adicionar ao Carrinho</button>
             </div>
         </section>
 
@@ -126,10 +126,11 @@
             // Salvar de volta no localStorage
             localStorage.setItem('carrinho', JSON.stringify(carrinho));
 
-            // Redirecionar para a página do carrinho
-            //window.location.href = 'carrinho.php';
+            // Feedback ao usuário (opcional)
+            alert('Item adicionado ao carrinho!');
         }
     </script>
+
 
     </div>
 

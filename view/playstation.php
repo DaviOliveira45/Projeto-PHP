@@ -57,56 +57,56 @@
                 <p class="titulojogo"><a href="../descricaoJogos/syberpunk.html">CyberPunk 2077</a></p>
                 <p class="titulojogolongo"><br></p>
                 <p class="preco">R$199,90</p>
-                <button class="comprar" onclick="adicionarAoCarrinho('CyberPunk 2077', 'R$199,90', '../imagens/stretched-1366-768-928956.jpg')">Adicionar ao adicionar</button>
+                <button class="comprar" onclick="adicionarAoCarrinho('CyberPunk 2077', 'R$199,90', '../imagens/stretched-1366-768-928956.jpg')">Adicionar ao Carrinho</button>
             </div>
             <div class="cards">
                 <img src="../imagens/stretched-1366-768-1221680.jpg"/>
                 <p class="titulojogo"><a href="../descricaoJogos/hogwartsLegacy.html">Hogwarts Legacy</a></p>
                 <p class="titulojogolongo"><br></p>
                 <p class="preco">R$219,90</p>
-                <button class="comprar" onclick="adicionarAoCarrinho('Hogwarts Legacy', 'R$219,90', '../imagens/stretched-1366-768-1221680.jpg')">Adicionar ao adicionar</button>
+                <button class="comprar" onclick="adicionarAoCarrinho('Hogwarts Legacy', 'R$219,90', '../imagens/stretched-1366-768-1221680.jpg')">Adicionar ao Carrinho</button>
             </div>
             <div class="cards">
                 <img src="../imagens/stretched-1366-768-1291883.png"/>
                 <p class="titulojogo"><a href="../descricaoJogos/eldenring.html">Elden Ring</a></p>
                 <p class="titulojogolongo"><br></p>
                 <p class="preco">R$249,90</p>
-                <button class="comprar"onclick="adicionarAoCarrinho('Elder Ring', 'R$249,90', '../imagens/stretched-1366-768-1291883.png')">Adicionar ao adicionar</button>
+                <button class="comprar"onclick="adicionarAoCarrinho('Elder Ring', 'R$249,90', '../imagens/stretched-1366-768-1291883.png')">Adicionar ao Carrinho</button>
             </div>
             <div class="cards">
                 <img src="../imagens/stretched-1366-768-1305512.png"/>
                 <p class="titulojogo">Residente Evil 4 Remake</p>
                 <p class="titulojogolongo"><br></p>
                 <p class="preco">R$199,90</p>
-                <button class="comprar" onclick="adicionarAoCarrinho('Resident Evil 4 Remake', 'R$199,90', '../imagens/stretched-1366-768-1305512.png')">Adicionar ao adicionar</button>
+                <button class="comprar" onclick="adicionarAoCarrinho('Resident Evil 4 Remake', 'R$199,90', '../imagens/stretched-1366-768-1305512.png')">Adicionar ao Carrinho</button>
             </div>
             <div class="cards">
                 <img src="../imagens/stretched-1366-768-424912.jpg"/>
                 <p class="titulojogo">The Witcher 3</p>
                 <p class="titulojogolongo"><br></p>
                 <p class="preco">R$209,90</p>
-                <button class="comprar" onclick="adicionarAoCarrinho('The Witcher 3', 'R$209,90', '../imagens/stretched-1366-768-424912.jpg')">Adicionar ao adicionar</button>
+                <button class="comprar" onclick="adicionarAoCarrinho('The Witcher 3', 'R$209,90', '../imagens/stretched-1366-768-424912.jpg')">Adicionar ao Carrinho</button>
             </div>
             <div class="cards">
                 <img src="../imagens/stretched-1366-768-782781.png"/>
                 <p class="titulojogo">Stardew Valley</p>
                 <p class="titulojogolongo"><br></p>
                 <p class="preco">R$79,90</p>
-                <button class="comprar" onclick="adicionarAoCarrinho('Stardew Valley', 'R$79,70', '../imagens/stretched-1366-768-782781.png')">Adicionar ao adicionar</button>
+                <button class="comprar" onclick="adicionarAoCarrinho('Stardew Valley', 'R$79,70', '../imagens/stretched-1366-768-782781.png')">Adicionar ao Carrinho</button>
             </div>
             <div class="cards">
                 <img src="../imagens/stretched-1366-768-168258.jpg"/>
                 <p class="titulojogo">The Elder Scrolls V</p>
                 <p class="titulojogolongo"><br></p>
                 <p class="preco">R$199,99</p>
-                <button class="comprar" onclick="adicionarAoCarrinho('The Elder Scrolls V', 'R$199,99', '../imagens/stretched-1366-768-168258.jpg')">Adicionar ao adicionar</button>
+                <button class="comprar" onclick="adicionarAoCarrinho('The Elder Scrolls V', 'R$199,99', '../imagens/stretched-1366-768-168258.jpg')">Adicionar ao Carrinho</button>
             </div>
             <div class="cards">
                 <img src="../imagens/stretched-1366-768-749806.png"/>
                 <p class="titulojogo">Red Dead</p>
                 <p class="titulojogolongo">Redemption 2</p>
                 <p class="preco">R$199,90</p>
-                <button class="comprar" onclick="adicionarAoCarrinho('Red Dead', 'R$199,90', '../imagens/stretched-1366-768-928956.jpg')">Adicionar ao adicionar</button>
+                <button class="comprar" onclick="adicionarAoCarrinho('Red Dead', 'R$199,90', '../imagens/stretched-1366-768-928956.jpg')">Adicionar ao Carrinho</button>
             </div>
         </section>
 
