@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entrar | GamerShop</title>
 
-    <link rel="stylesheet" href="../css/style.css"/>
-    <link rel="stylesheet" href="../css/stylelogin.css"/>
-    <script src="../_java/interacao.js"></script>
+    <link rel="stylesheet" href="../view/css/style.css"/>
+    <link rel="stylesheet" href="../view/css/stylelogin.css"/>
 
 </head>
 <body>
@@ -30,7 +29,7 @@
                         <input type="text" placeholder="Busque seu jogo..." id="search"/>
                     </section>
                     <aside id="pesquisa1">
-                        <img id="pesquisadesktop" src="../imagens/imgpesquisar_resized.png"/>
+                        <img id="pesquisadesktop" src="../view/imagens/imgpesquisar_resized.png"/>
                     </aside>    
                 </div>
                 <ul id="entrar-registro">
@@ -39,10 +38,10 @@
         
             </nav>
         
-            <img id="logo" src="../imagens/G mer (200 x 112 px).png"/>
+            <img id="logo" src="../view/imagens/G mer (200 x 112 px).png"/>
         
             <div id="sacoladesktop">
-            <li id="geral"><a href="carrinho.php"> <img src="../imagens/sacola(60 x 40).png"/></a></li>
+            <li id="geral"><a href="carrinho.php"> <img src="../view/imagens/sacola(60 x 40).png"/></a></li>
             </div>
         
         </header>
