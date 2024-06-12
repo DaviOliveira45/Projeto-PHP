@@ -17,7 +17,7 @@
                 $novoCliente->setNomeCliente($_POST['nome']);
                 $novoCliente->setCpf($_POST['cpf']);
                 $novoCliente->setEmail($_POST['email']);
-                $novoCliente->setSenha($_POST['senha']);
+                $novoCliente->setSenha(password_hash($_POST['senha'], PASSWORD_DEFAULT));
 
                 $novoCliente->cadastraCliente();
                 
@@ -31,11 +31,11 @@
 
         public function actionDelete($acao, $id)
         {
-            if($acao == "E") //EXCLUIR (DELETE)
+            if($acao == "E") // EXCLUIR (DELETE)
             {
                 $Cliente = new Cliente();
-                $Cliente->ExcluirCliente($id);
-
+                $Cliente->excluirCliente($id);
+                header('Location: index.php?url=LISTACLIENTE');
             }
         }
 
@@ -59,6 +59,7 @@
                 header('Location: index.php?url=LISTACLIENTE');
             }
         }
+
     }
 
 ?>

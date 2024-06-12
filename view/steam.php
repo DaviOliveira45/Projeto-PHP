@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Steam | GamerShop</title>
 
-    <link rel="stylesheet" href="../view/css/stylesteam.css"/>
-    <link rel="stylesheet" href="../view/css/style.css"/>
+    <link rel="stylesheet" href="view/css/stylesteam.css"/>
+    <link rel="stylesheet" href="view/css/style.css"/>
     
 
 </head>
