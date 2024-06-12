@@ -66,5 +66,30 @@ class Jogo {
             echo "<p style='color: red'>Exclusão falhou! </p>";
         }
     }
+
+    public function getIdJogo() {
+        return $this->idJogo;
+    }
+
+    public function getNomeJogo() {
+        return $this->nomeJogo;
+    }
+
+    public function getValor() {
+        return $this->valor;
+    }
+
+    public function setIdJogo($idJogo) {
+        $this->idJogo = $idJogo;
+    }
+
+    public function setNomeJogo($nomeJogo) {
+        $this->nomeJogo = $nomeJogo;
+    }
+
+    public function setValor($valor) {
+        $this->valor = $valor;
+    }
+
 }
 ?>
