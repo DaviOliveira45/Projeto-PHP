@@ -14,7 +14,6 @@
     <div id="interface">
 
         <header id="cabecalho">
-
         
             <nav id="menu">
                 <h1>Menu principal</h1>
