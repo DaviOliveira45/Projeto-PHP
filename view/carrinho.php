@@ -30,7 +30,7 @@
                 <input type="text" placeholder="Busque seu jogo..." id="search"/>
             </section>
             <aside id="pesquisa1">
-                <img id="pesquisadesktop" src="../view/imagens/imgpesquisar_resized.png"/>
+                <img id="pesquisadesktop" src="view/imagens/imgpesquisar_resized.png"/>
             </aside>    
         </div>
         <ul id="entrar-registro">
@@ -39,10 +39,10 @@
 
     </nav>
 
-    <img id="logo" src="../view/imagens/G mer (200 x 112 px).png"/>
+    <img id="logo" src="view/imagens/G mer (200 x 112 px).png"/>
 
     <div id="sacoladesktop">
-        <li id="geral"><a href="carrinho.php"> <img src="../view/imagens/sacola(60 x 40).png"/></a></li>
+        <li id="geral"><a href="carrinho.php"> <img src="view/imagens/sacola(60 x 40).png"/></a></li>
     </div>
 
 </header>

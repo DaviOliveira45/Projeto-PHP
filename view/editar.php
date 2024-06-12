@@ -29,9 +29,9 @@
         <nav id="menu">
             <h1>Menu principal</h1>
             <ul type="square">
-                <li id="geral"><a href="index.html">Home</a></li>
-                <li id="geral"><a href="playstation.html">PlayStation</a></li>
-                <li id="geral"><a href="steam.html">Steam</a></li>           
+                <li id="geral"><a href="index.php">Home</a></li>
+                <li id="geral"><a href="playstation.php">PlayStation</a></li>
+                <li id="geral"><a href="steam.php">Steam</a></li>           
             </ul>
             <div id="campopesquisa">
                 <section id="pesquisa">
@@ -42,7 +42,7 @@
                 </aside>    
             </div>
             <ul id="entrar-registro">
-                <li><a href="login.html">Entrar/Registrar</a></li>
+                <li><a href="login.php">Entrar/Registrar</a></li>
             </ul>
 
         </nav>

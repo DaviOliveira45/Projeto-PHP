@@ -29,7 +29,7 @@
                         <input type="text" placeholder="Busque seu jogo..." id="search"/>
                     </section>
                     <aside id="pesquisa1">
-                        <img id="pesquisadesktop" src="../view/imagens/imgpesquisar_resized.png"/>
+                        <img id="pesquisadesktop" src="view/imagens/imgpesquisar_resized.png"/>
                     </aside>    
                 </div>
                 <ul id="entrar-registro">
@@ -38,10 +38,10 @@
         
             </nav>
         
-            <img id="logo" src="../view/imagens/G mer (200 x 112 px).png"/>
+            <img id="logo" src="view/imagens/G mer (200 x 112 px).png"/>
         
             <div id="sacoladesktop">
-                <li id="geral"><a href="carrinho.php"> <img src="../view/imagens/sacola(60 x 40).png"/></a></li>
+                <li id="geral"><a href="carrinho.php"> <img src="view/imagens/sacola(60 x 40).png"/></a></li>
             </div>
         
         </header>
@@ -49,13 +49,13 @@
     <div id="interface">
 
         <div id="fundogamershop">
-            <img src="../view/imagens/fundo_gamershopatualizado.png"/>
+            <img src="view/imagens/fundo_gamershopatualizado.png"/>
         </div>
 
         <section id="corpo">
 
             <div id="texto-imgseparacao1">
-                <img src="../view/imagens/1.png"></img>
+                <img src="view/imagens/1.png"></img>
             </div>
 
                 <div id="alinhamento">
@@ -69,7 +69,7 @@
                         </section>
                         <section id="imagemright">
                             <div id="imagemlateral-right">
-                                <img src="../view/imagens/stretched-1366-768-1245270.jpg"/>
+                                <img src="view/imagens/stretched-1366-768-1245270.jpg"/>
                             </div>
                         </section>
                         <div id="texto-enchelinguica">
@@ -80,14 +80,14 @@
                 </div>
 
                 <div id="texto-imgseparacao">
-                    <img src="../view/imagens/2.png"></img>
+                    <img src="view/imagens/2.png"></img>
                 </div>
 
                 <div id="alinhamento">
                     <div id="imagem-texto">
                         <section id="imagemleft">
                             <div id="imagemlateral-left">
-                                <img src="../view/imagens/stretched-1366-768-1221190.jpg"/>
+                                <img src="view/imagens/stretched-1366-768-1221190.jpg"/>
                             </div>
                         </section>
                         <section id="textoright">
@@ -101,13 +101,13 @@
                 </div>
             
                 <div id="texto-imgseparacao">
-                    <img src="../view/imagens/3.png"></img>
+                    <img src="view/imagens/3.png"></img>
                 </div>
 
                 <div id="imagem-desconto">
                     <section id="imagensjogo">
                         <div id="imagensdiversas">
-                            <img id="imagem1" src="../view/imagens/item1.png" alt="Imagem 1">
+                            <img id="imagem1" src="view/imagens/item1.png" alt="Imagem 1">
                         </div>
                     </section>
                     <aside id="frasedesconto">
@@ -126,11 +126,11 @@
 
     <script>
                 const imagens = [
-        "../view/imagens/item2.png",
-        "../view/imagens/item3.png",
-        "../view/imagens/item4.png",
-        "../view/imagens/item5.png",
-        "../view/imagens/item1.png"
+        "view/imagens/item2.png",
+        "view/imagens/item3.png",
+        "view/imagens/item4.png",
+        "view/imagens/item5.png",
+        "view/imagens/item1.png"
         ];
         const tempoDeTroca = 9000; // Intervalo de tempo em milissegundos (5 segundos)
         let indiceAtual = 0;
