@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrar | GamerShop</title>
 
-    <link rel="stylesheet" href="../view/css/style.css"/>
-    <link rel="stylesheet" href="../view/css/styleregistro.css"/>
+    <link rel="stylesheet" href="view/css/style.css"/>
+    <link rel="stylesheet" href="view/css/styleregistro.css"/>
 
 </head>
 <body>
@@ -28,7 +28,7 @@
                 <input type="text" placeholder="Busque seu jogo..." id="search"/>
             </section>
             <aside id="pesquisa1">
-                <img id="pesquisadesktop" src="../view/imagens/imgpesquisar_resized.png"/>
+                <img id="pesquisadesktop" src="view/imagens/imgpesquisar_resized.png"/>
             </aside>    
         </div>
         <ul id="entrar-registro">
@@ -37,15 +37,15 @@
 
     </nav>
 
-    <img id="logo" src="../view/imagens/G mer (200 x 112 px).png"/>
-    <img id="logomobile" src="../view/imagens/logo_gamershop (63 x 63 px).png"/>
+    <img id="logo" src="view/imagens/G mer (200 x 112 px).png"/>
+    <img id="logomobile" src="view/imagens/logo_gamershop (63 x 63 px).png"/>
 
     <div id="submenubotao">
-        <img src="../view/imagens/imgbotao-att.png"/>
+        <img src="view/imagens/imgbotao-att.png"/>
     </div>
 
     <div id="sacoladesktop">
-        <img src="../view/imagens/sacola(60 x 40).png"/>
+        <img src="view/imagens/sacola(60 x 40).png"/>
     </div>
 
     </header>
