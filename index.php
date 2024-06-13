@@ -21,12 +21,15 @@
         $controle = new controllerCliente();
         $controle->action("R");
     }
-    else if($url == "EXCLUIR")
+    elseif($url=="EXCLUIR")
     {
         require_once("controller/controllerCliente.php");
         $controle = new controllerCliente();
-        $id = $_GET['id'];
-        $controle->actionDelete("E", $id);
+        $id = $_SERVER['REQUEST_URI'];
+        //var_dump($id);
+        $teste = explode("=",$id);
+        $idExcluir = $teste[1];
+        $controle->actionDelete("E", $idExcluir);
     }
     elseif ($url == "EDITAR") 
     {
@@ -41,5 +44,4 @@
         $controle = new controllerCliente();
         $controle->actionUpdate("U");
     }
-    
 ?>
