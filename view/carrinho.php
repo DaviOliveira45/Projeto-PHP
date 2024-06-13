@@ -92,7 +92,7 @@ $valorTotal = calcularValorTotal($carrinho);
                 <button class="finalizar-compra" type="submit" name="finalizar">Finalizar Compra</button>
             </form>
             <?php if (isset($_POST['finalizar'])): ?>
-                <p id="mensagem-compra" style="display: block;">Compra efetuada com sucesso!</p>
+                <p id="mensagem-compra" >Compra efetuada com sucesso!</p>
             <?php endif; ?>
         </div>
     </div>
