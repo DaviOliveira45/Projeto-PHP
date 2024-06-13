@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-// Função para calcular o valor total do carrinho...
+// Função para calcular o valor total do carrinho
 function calcularValorTotal($carrinho) {
     $valorTotal = 0;
     foreach ($carrinho as $item) {
@@ -12,12 +12,12 @@ function calcularValorTotal($carrinho) {
     return $valorTotal;
 }
 
-// Inicializar o carrinho na sessão se não estiver definido...
+// Inicializar o carrinho na sessão se não estiver definido
 if (!isset($_SESSION['carrinho'])) {
     $_SESSION['carrinho'] = [];
 }
 
-// Função para adicionar item ao carrinho...
+// Função para adicionar item ao carrinho
 function adicionarAoCarrinho($nome, $preco, $imagem) {
     $_SESSION['carrinho'][] = [
         'nome' => $nome,
@@ -26,29 +26,27 @@ function adicionarAoCarrinho($nome, $preco, $imagem) {
     ];
 }
 
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nome']) && isset($_POST['preco']) && isset($_POST['imagem'])) {
-    // Adiciona o item ao carrinho
-    adicionarAoCarrinho($_POST['nome'], $_POST['preco'], $_POST['imagem']);
-
-    // Redireciona de volta à página do produto ou carrinho
-    header('Location: index.php');
-    exit();
-}
-
-// Remover item do carrinho...
-if (isset($_POST['remover'])) {
-    $index = intval($_POST['remover']);
-    if (isset($_SESSION['carrinho'][$index])) {
-        unset($_SESSION['carrinho'][$index]);
+// Adicionar item ao carrinho via POST
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if (isset($_POST['nome']) && isset($_POST['preco']) && isset($_POST['imagem'])) {
+        adicionarAoCarrinho($_POST['nome'], $_POST['preco'], $_POST['imagem']);
+        header('Location: index.php');
+        exit();
     }
-
-    $_SESSION['carrinho'] = array_values($_SESSION['carrinho']);
-}
-
-
-if (isset($_POST['finalizar'])) {
-    $_SESSION['carrinho'] = [];
+    
+    // Remover item do carrinho
+    if (isset($_POST['remover'])) {
+        $index = intval($_POST['remover']);
+        if (isset($_SESSION['carrinho'][$index])) {
+            unset($_SESSION['carrinho'][$index]);
+            $_SESSION['carrinho'] = array_values($_SESSION['carrinho']);
+        }
+    }
+    
+    // Finalizar compra
+    if (isset($_POST['finalizar'])) {
+        $_SESSION['carrinho'] = [];
+    }
 }
 
 $carrinho = $_SESSION['carrinho'];
@@ -74,13 +72,12 @@ $valorTotal = calcularValorTotal($carrinho);
                 <h3>Meu Carrinho</h3>
             </div>
             <ul id="carrinho-itens">
-            
-                <?php foreach ($carrinho as $index => $item) : ?>
+                <?php foreach ($carrinho as $index => $item): ?>
                     <li class="carrinho-itens">
-                        <img src="<?php echo htmlspecialchars($item['imagem']); ?>" alt="<?php echo htmlspecialchars($item['nome']); ?>" />
+                        <img src="<?php echo $item['imagem']; ?>" alt="<?php echo $item['nome']; ?>" />
                         <div>
-                            <p><?php echo htmlspecialchars($item['nome']); ?></p> 
-                            <p><?php echo htmlspecialchars($item['preco']); ?></p>
+                            <p><?php echo $item['nome']; ?></p>
+                            <p><?php echo $item['preco']; ?></p>
                         </div>
                         <form method="post" style="display:inline;">
                             <button type="submit" name="remover" value="<?php echo $index; ?>">Remover</button>
@@ -94,7 +91,7 @@ $valorTotal = calcularValorTotal($carrinho);
             <form method="post">
                 <button class="finalizar-compra" type="submit" name="finalizar">Finalizar Compra</button>
             </form>
-            <?php if (isset($_POST['finalizar'])) : ?>
+            <?php if (isset($_POST['finalizar'])): ?>
                 <p id="mensagem-compra" style="display: block;">Compra efetuada com sucesso!</p>
             <?php endif; ?>
         </div>
