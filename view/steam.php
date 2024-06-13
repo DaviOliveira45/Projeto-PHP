@@ -4,11 +4,13 @@ session_start();
 function calcularValorTotal($carrinho) {
     $valorTotal = 0;
     foreach ($carrinho as $item) {
+        
         $precoNumerico = floatval(str_replace(['R$', ','], ['', '.'], $item['preco']));
         $valorTotal += $precoNumerico;
     }
     return $valorTotal;
 }
+
 
 function adicionarAoCarrinho($nome, $preco, $imagem) {
     $_SESSION['carrinho'][] = [
@@ -18,9 +20,15 @@ function adicionarAoCarrinho($nome, $preco, $imagem) {
     ];
 }
 
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nome']) && isset($_POST['preco']) && isset($_POST['imagem'])) {
+   
     adicionarAoCarrinho($_POST['nome'], $_POST['preco'], $_POST['imagem']);
+
+    
     $_SESSION['mensagem'] = 'Item adicionado ao carrinho com sucesso!';
+
+    
     header('Location: ' . $_SERVER['PHP_SELF']);
     exit();
 }
@@ -28,6 +36,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nome']) && isset($_POS
 $carrinho = isset($_SESSION['carrinho']) ? $_SESSION['carrinho'] : [];
 $valorTotal = calcularValorTotal($carrinho);
 ?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayStation | GamerShop</title>
+    <link rel="stylesheet" href="../view/css/styleplaystation.css"/>
+    <link rel="stylesheet" href="../view/css/style.css"/>
+
+        
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mensagemSucesso = document.getElementById('mensagem-sucesso');
+            if (mensagemSucesso) {
+                setTimeout(function () {
+                    mensagemSucesso.style.display = 'none';
+                }, 3000);
+            }
+        });
+    </script>
 
 <!DOCTYPE html>
 <html lang="pt-br">
