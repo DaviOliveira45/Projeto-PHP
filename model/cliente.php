@@ -49,7 +49,7 @@
                 $sql = $conn->prepare("SELECT * FROM gamershop.clientes WHERE idCliente = :id");
                 $sql->bindParam(':id', $id, PDO::PARAM_INT);
                 $sql->execute();
-                return $sql->fetch();
+                return $sql->fetch(PDO::FETCH_ASSOC);
         }
         
         public function updateCliente($id, $nome, $cpf, $email, $senha) {
@@ -69,17 +69,24 @@
         }
            
 
-        public function excluirCliente($id)
-        {
-                try {
-                        $conn = Conexao::conectar();
-                        $sql = $conn->prepare("DELETE FROM gamershop.clientes WHERE idCliente = :id");
-                        $sql->bindParam(":id", $id, PDO::PARAM_INT);
-                        $sql->execute();
-                        echo "<p style='color: green'>Cliente excluído com sucesso!</p>";
-                } catch (PDOException $erro) {
-                        echo "<p style='color: red'>Exclusão falhou!</p>";
+        public function excluirCliente($id) {
+                $conn = Conexao::conectar();
+                if (!$conn) {
+                echo "<p style='color: red'>Falha na conexão com o banco de dados.</p>";
+                return;
                 }
+
+                $sql = $conn->prepare("SELECT idCliente, nomeCliente, cpf, email, senha FROM gamershop.clientes");
+                $sql->execute();
+                $result = $sql->fetchAll();
+
+                if (!empty($id)) {
+                $sqlDelete = $conn->prepare("DELETE FROM gamershop.clientes WHERE idCliente = :id");
+                $sqlDelete->bindParam(":id", $id);
+                $sqlDelete->execute();
+                }
+
+                require_once('./view/excluir.php');
         }
 
 

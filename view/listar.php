@@ -6,10 +6,9 @@
     <title>Listar</title>
     <link rel="stylesheet" href="view/css/style.css">
     <link rel="stylesheet" href="view/css/styletable.css">
-
 </head>
 <body>
-    <h1>Lista de Clientes</h1>
+    <h1>Listar Clientes</h1>
     <div>
         <table>
             <thead>
@@ -31,10 +30,8 @@
                     <td><?= $infoClientes['email'] ?></td>
                     <td><?= $infoClientes['senha'] ?></td>
                     <td>
-                        <a style="margin-right: 20px" href="index.php?url=EDITAR&id=<?= $infoClientes['idCliente'] ?>">Editar</a>
-                        <a style="margin-right: -35px;" href="index.php?url=EXCLUIR&id=<?= $infoClientes['idCliente'] ?>" onclick="return confirm('Tem certeza que deseja excluir este cliente?')">Excluir</a>
+                        <a href="index.php?url=EDITAR&id=<?= $infoClientes['idCliente'] ?>">Editar</a>
                     </td>
-                    
                 </tr>
                 <?php } ?>
             </tbody>
